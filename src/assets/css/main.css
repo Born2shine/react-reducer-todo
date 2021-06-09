@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+button, input[type="checkbox"], .action {
+  cursor: pointer;
+}
+
+.after, .active:nth-child(1)::after, .active:nth-child(2)::after, .active:nth-child(3)::after {
+  position: absolute;
+  height: 3px;
+  content: "";
+  background: #2F80ED;
+  bottom: -1rem;
+  text-align: center;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.active {
+  position: relative;
+}
+
+.active:nth-child(1)::after {
+  width: 50px;
+  left: -1rem;
+}
+
+.active:nth-child(2)::after {
+  width: 80px;
+  left: -1rem;
+}
+
+.active:nth-child(3)::after {
+  width: 100%;
+}
+
+.error {
+  border: 1px solid #EB5757 !important;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+main h1 {
+  font-weight: 700;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+main .container .title {
+  border-bottom: 1px solid #BDBDBD;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+main .container .title ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+}
+
+main .container .title ul li {
+  list-style: none;
+  color: #333333;
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+main .container .content {
+  margin: 1.3rem 0;
+}
+
+main .container .content .form-container form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 100px;
+      grid-template-columns: 1fr 100px;
+  gap: 1rem;
+}
+
+main .container .content .form-container form input, main .container .content .form-container form button {
+  padding: 1rem;
+  font-family: inherit;
+  border-radius: .6rem;
+}
+
+main .container .content .form-container form input {
+  border: 1px solid #BDBDBD;
+  width: 100%;
+}
+
+main .container .content .form-container form input:focus {
+  outline: none;
+}
+
+main .container .content .form-container form input::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #828282;
+}
+
+main .container .content .form-container form input:-ms-input-placeholder {
+  font-size: 1rem;
+  color: #828282;
+}
+
+main .container .content .form-container form input::-ms-input-placeholder {
+  font-size: 1rem;
+  color: #828282;
+}
+
+main .container .content .form-container form input::placeholder {
+  font-size: 1rem;
+  color: #828282;
+}
+
+main .container .content .form-container form button {
+  border: none;
+  background: #2F80ED;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+main .container .content .form-container form button:focus {
+  outline: none;
+}
+
+main .container .content .todo-list {
+  margin: 1.2rem 0;
+}
+
+main .container .content .todo-list .single-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0;
+}
+
+main .container .content .todo-list .single-task .task {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: .5rem;
+  place-items: center;
+}
+
+main .container .content .todo-list .single-task .task input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+  outline: none;
+}
+
+main .container .content .todo-list .single-task .task label {
+  font-weight: 600;
+}
+
+main .container .content .todo-list .single-task .action {
+  color: #828282;
+}
+
+main .container .content .todo-list .trash {
+  padding: 1rem .8rem;
+  padding-left: 1.8rem;
+  margin-top: 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #EB5757;
+  color: #fff;
+  width: 140px;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+main .container .content .todo-list .trash .trash-icon {
+  font-size: .8rem;
+}
+
+main .container .content .todo-list .empty-task {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  padding: 1rem;
+}
+
+main .flash {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+  background: #cdf7d2;
+  padding: .9rem 1rem;
+  color: #4caf50;
+  text-align: center;
+  font-weight: 600;
+  font-size: .9rem;
+  -webkit-transition: 1.5s all ease;
+  transition: 1.5s all ease;
+}
+
+main .flash-on {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    width: 40%;
+  }
+}
